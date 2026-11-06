@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="The digital portfolio of Rhaine Kylle Balabag, an IT student from Baguio City, Philippines.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Rhaine Kylle Balabag — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="portfolio-shell">
+    <header class="site-header">
+      <button class="brand" type="button" data-view="home" aria-label="Rhaine — go to Home">
+        <span class="brand-symbol" aria-hidden="true"><span>R</span><span>B</span></span>
+        <span class="brand-word">RHAINE<span class="brand-period">.</span></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-button is-active" type="button" data-view="home" aria-current="page">Home</button>
+        <button class="nav-button" type="button" data-view="about">About Me</button>
+        <button class="nav-button" type="button" data-view="education">Education &amp; Achievements</button>
+        <button class="nav-button" type="button" data-view="family-friends">Family &amp; Friends</button>
+      </nav>
+
+      <button class="button button-primary header-cta" type="button" data-view="about">
+        <span>Let's Connect</span><i class="bx bx-arrow-up-right" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <main class="screen-stage">
+      <div class="content-region" id="content-region" aria-live="polite" aria-atomic="true"></div>
+    </main>
+    <span class="screen-grain" aria-hidden="true"></span>
+  </div>
+
+  <template id="view-home">
+    <section class="view-panel home-view" aria-labelledby="home-title">
+      <div class="gauge-cluster gauge-left" aria-hidden="true">
+        <div class="instrument-dial gauge-primary">
+          <span class="dial-label dial-label-low">10</span><span class="dial-label dial-label-high">100</span>
+          <span class="dial-needle"></span><span class="dial-hub"></span>
+        </div>
+      </div>
+
+      <div class="home-center-stack">
+        <div class="portrait-stage">
+          <div class="portrait-orbit" aria-hidden="true"></div>
+          <div class="portrait-frame">
+            <img class="portrait-image" id="portrait-image" alt="Portrait of Rhaine Kylle Balabag" hidden>
+          </div>
+        </div>
+
+        <div class="home-copy">
+          <h1 class="home-name" id="home-title" aria-label="Rhaine Kylle Balabag"><span class="typed-output" aria-hidden="true"></span><span class="typing-caret" aria-hidden="true"></span></h1>
+          <p class="hero-heading"><span class="role-accent">IT STUDENT</span> AND ASPIRING DEVELOPER</p>
+          <div class="home-socials" id="home-socials" aria-label="Social profiles"></div>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-view="education"><span>Explore My Work</span><i class="bx bx-right-arrow-alt" aria-hidden="true"></i></button>
+            <button class="button button-secondary" id="cv-button" type="button" disabled title="Add your real CV path to portfolio.cvUrl in script.js to enable downloads."><i class="bx bx-download" aria-hidden="true"></i><span>Download CV</span></button>
+          </div>
+          <div class="quick-facts" aria-label="Explore more">
+            <button class="fact-card" type="button" data-view="education"><span class="fact-icon"><i class="bx bx-book-open" aria-hidden="true"></i></span><span><strong>IT Student</strong><small>Building my foundation</small></span></button>
+            <button class="fact-card" type="button" data-view="education"><span class="fact-icon"><i class="bx bx-code-alt" aria-hidden="true"></i></span><span><strong>Web Development</strong><small>Learning by creating</small></span></button>
+            <button class="fact-card" type="button" data-view="about"><span class="fact-icon"><i class="bx bx-refresh" aria-hidden="true"></i></span><span><strong>Continuous Learning</strong><small>One step at a time</small></span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gauge-cluster gauge-right" aria-hidden="true">
+        <div class="instrument-dial gauge-primary">
+          <span class="dial-label dial-label-low">10</span><span class="dial-label dial-label-high">100</span>
+          <span class="dial-needle"></span><span class="dial-hub"></span>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="view-about">
+    <section class="view-panel inner-view profile-page about-page" aria-labelledby="about-title">
+      <div class="about-layout about-reference-layout about-profile-layout">
+        <figure class="about-photo-frame">
+          <img class="about-profile-photo" alt="Rhaine Kylle Balabag in graduation attire with medals" loading="eager" decoding="async" hidden>
+        </figure>
+        <article class="about-copy about-profile-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> ABOUT ME / PROFILE</p>
+          <header class="about-profile-heading">
+            <h1 id="about-title"><span id="about-name-first"></span> <span class="about-name-accent" id="about-name-last"></span></h1>
+            <p class="about-profile-role"><span class="about-live-dot" aria-hidden="true"></span><span id="about-role"></span></p>
+          </header>
+          <div class="about-profile-content">
+            <dl class="about-facts" id="about-facts" aria-label="Personal details"></dl>
+            <section class="about-education-strip" aria-label="Education">
+              <div class="about-education-caption"><span class="about-section-label">EDUCATION</span><span class="about-year-badge" id="about-year"></span></div>
+              <strong class="about-college-name" id="about-college"></strong>
+              <p class="about-course-row"><span>COURSE</span><span id="about-course"></span></p>
+            </section>
+            <div class="about-topic-grid">
+              <section class="about-topic" aria-labelledby="about-hobbies-title">
+                <h2 id="about-hobbies-title">HOBBIES</h2>
+                <ul class="about-tag-list" id="about-hobbies"></ul>
+              </section>
+              <section class="about-topic" aria-labelledby="about-interests-title">
+                <h2 id="about-interests-title">INTERESTS</h2>
+                <ul class="about-tag-list" id="about-interests"></ul>
+              </section>
+              <section class="about-topic" aria-labelledby="about-skills-title">
+                <h2 id="about-skills-title">SKILLS</h2>
+                <ul class="about-tag-list" id="about-skills"></ul>
+              </section>
+              <section class="about-topic" aria-labelledby="about-technical-title">
+                <h2 id="about-technical-title">TECHNICAL SKILLS</h2>
+                <ul class="about-tag-list" id="about-technical-skills"></ul>
+              </section>
+            </div>
+            <section class="about-statement" aria-label="Personal statement">
+              <span class="about-section-label">PERSONAL STATEMENT</span>
+              <p id="about-statement"></p>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+  </template>
+
+  <template id="view-education">
+    <section class="view-panel inner-view collection-page education-page" aria-labelledby="education-title">
+      <header class="collection-page-header">
+        <p class="eyebrow"><span class="eyebrow-line"></span> EDUCATION &amp; ACHIEVEMENTS</p>
+        <h1 id="education-title">MY EDUCATIONAL <span>JOURNEY</span></h1>
+        <p class="section-lede">Choose a school to see its story and achievements.</p>
+      </header>
+      <div class="school-grid" id="school-grid" aria-label="Schools and their achievements"></div>
+    </section>
+  </template>
+
+  <template id="view-education-detail">
+    <section class="view-panel inner-view education-detail-page" aria-labelledby="school-detail-name">
+      <button class="back-button" type="button" data-view="education"><i class="bx bx-arrow-back" aria-hidden="true"></i> Back to Schools</button>
+      <div class="education-detail-layout">
+        <div class="education-detail-logo">
+          <img class="school-logo-image" id="school-detail-logo" alt="" hidden>
+          <div class="school-logo-placeholder" id="school-detail-logo-placeholder">
+            <strong id="school-detail-mark">AM</strong>
+            <span>SCHOOL LOGO</span>
+          </div>
+        </div>
+        <div class="education-detail-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> <span id="school-detail-level">EDUCATION</span></p>
+          <h1 id="school-detail-name">School name</h1>
+          <p class="education-detail-program" id="school-detail-program"></p>
+          <span class="education-detail-status" id="school-detail-status"></span>
+          <p class="education-detail-description" id="school-detail-description"></p>
+        </div>
+      </div>
+      <section class="school-achievement-section" aria-labelledby="school-achievement-title">
+        <h2 class="school-achievement-title" id="school-achievement-title">ACHIEVEMENTS AT THIS SCHOOL</h2>
+        <div class="school-achievements-grid" id="school-achievements"></div>
+      </section>
+    </section>
+  </template>
+
+  <template id="view-family-friends">
+    <section class="view-panel inner-view connections-page" aria-labelledby="connections-title">
+      <header class="connections-header">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE PEOPLE WHO MAKE THE JOURNEY MEANINGFUL</p>
+        <h1 id="connections-title">FAMILY <span>&amp; FRIENDS</span></h1>
+      </header>
+      <div class="connections-grid">
+        <article class="connection-panel" aria-labelledby="family-title">
+          <div class="connection-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE PEOPLE CLOSEST TO HOME</p>
+            <h2 id="family-title">MY <span>FAMILY</span></h2>
+            <p class="placeholder-page-subtitle">More about the people who are part of my story.</p>
+          </div>
+          <div class="memory-slots" aria-label="Future family photo placeholders">
+            <div class="memory-slot"><i class="bx bx-image-add" aria-hidden="true"></i><span>PHOTO SLOT 01</span><small>Family photo</small></div>
+            <div class="memory-slot"><i class="bx bx-image-add" aria-hidden="true"></i><span>PHOTO SLOT 02</span><small>Add a description later</small></div>
+            <div class="memory-slot"><i class="bx bx-image-add" aria-hidden="true"></i><span>PHOTO SLOT 03</span><small>Add a memory later</small></div>
+          </div>
+          <p class="placeholder-note"><i class="bx bx-lock-alt" aria-hidden="true"></i> This space is ready for details you choose to share.</p>
+        </article>
+        <article class="connection-panel" aria-labelledby="friends-title">
+          <div class="connection-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE PEOPLE ALONG THE WAY</p>
+            <h2 id="friends-title">MY <span>PEOPLE</span></h2>
+            <p class="placeholder-page-subtitle">Memories, friendships, and the people who make the journey meaningful.</p>
+          </div>
+          <div class="memory-slots" aria-label="Future friends photo placeholders">
+            <div class="memory-slot"><i class="bx bx-image-add" aria-hidden="true"></i><span>PHOTO SLOT 01</span><small>Friends photo</small></div>
+            <div class="memory-slot"><i class="bx bx-image-add" aria-hidden="true"></i><span>PHOTO SLOT 02</span><small>Add a description later</small></div>
+            <div class="memory-slot"><i class="bx bx-image-add" aria-hidden="true"></i><span>PHOTO SLOT 03</span><small>Add a memory later</small></div>
+          </div>
+          <p class="placeholder-note"><i class="bx bx-lock-alt" aria-hidden="true"></i> This space is ready for details you choose to share.</p>
+        </article>
+      </div>
+    </section>
+  </template>
+</body>
+</html>
